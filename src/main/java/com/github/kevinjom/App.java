@@ -25,7 +25,7 @@ public class App {
     }
 
     public static void postWithoutContainers() {
-        HttpClient client = new MyHttpClient();
+        HttpClient client = new MyHttpClient(new AppConfigruation().getObjectMapper());
 
         TwitterService twitterService = new TwitterService();
         twitterService.setHttpClient(client);
