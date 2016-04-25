@@ -1,5 +1,6 @@
 package com.github.kevinjom;
 
+import com.github.kevinjom.config.AppConfigruation;
 import com.github.kevinjom.http.HttpClient;
 import com.github.kevinjom.http.MyHttpClient;
 import com.github.kevinjom.service.MessagePoster;
@@ -8,6 +9,7 @@ import com.github.kevinjom.service.WeiboService;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
@@ -17,8 +19,9 @@ public class App {
         //postWithoutContainers();
 
 //        postWithBeanFactory();
-        postWithApplicationContext();
+//        postWithApplicationContext();
 
+        postWithJavaConfigContext();
     }
 
     public static void postWithoutContainers() {
@@ -43,5 +46,11 @@ public class App {
         BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
         MessagePoster messagePoster = beanFactory.getBean(MessagePoster.class);
         messagePoster.post("hello bean facotry");
+    }
+
+    public static void postWithJavaConfigContext() {
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfigruation.class);
+        MessagePoster messagePoster = applicationContext.getBean(MessagePoster.class);
+        messagePoster.post("hello java config app ctxt");
     }
 }
