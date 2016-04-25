@@ -81,6 +81,35 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 - instance fm
 - FactoryBean
 
+--
+
+### Constructor Injection vs Setter Inection
+#### follow Mr Jay, Constructor Injection *please*
+
+(demo code)
+
+--
+
+### Bean Scope
+- singleton(default)
+- prototype
+- request
+- session
+- global-session
+
+--
+
+### Bean Scope
+> You cannot dependency-inject a prototype-scoped bean into your singleton bean, because that injection occurs only once
+
+#### method injection?
+
+--
+
+### Autowire
+
+
+--
 
 ### Lifecycle
 
