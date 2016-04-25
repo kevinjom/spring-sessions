@@ -117,7 +117,7 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 
 --
 
-@Autowired
+### @Autowired
 
 - autowiring by type
 - indicate this dependent bean is required
@@ -127,6 +127,15 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 @Resource - by name
 
 --
+
+### Component Scan
+
+--
+
+### Java Configuration
+- @Configuration
+- @Bean
+- @Scope
 
 ### Lifecycle
 

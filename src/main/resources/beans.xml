@@ -4,13 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <bean id="httpClient" class="com.github.kevinjom.http.MyHttpClient"/>
-    <bean id="weiboService" class="com.github.kevinjom.service.WeiboService"/>
-    <bean id="twitterService" class="com.github.kevinjom.service.TwitterService"></bean>
-
-    <bean class="com.github.kevinjom.service.MessagePoster"/>
-
     <context:annotation-config/>
+    <context:component-scan base-package="com.github.kevinjom"/>
 
 </beans>

@@ -3,7 +3,9 @@ package com.github.kevinjom.service;
 import com.github.kevinjom.model.Tweet;
 import com.github.kevinjom.model.Weibo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MessagePoster {
     private final TwitterService twitterService;
     private final WeiboService weiboService;
