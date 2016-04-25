@@ -34,6 +34,8 @@ Spring provides
 - BeanFactory
 - ApplicationContext
 
+--
+
 ### Congiuration metadata
 #### configuration metadata represents how you as an application developer tell the Spring container to instantiate, configure, and assemble the objects in your application
 
@@ -41,6 +43,12 @@ Spring supports
 
 - xml
 - java configuration
+
+--
+
+###  Instantiating a container
+
+(demo code)
 
 --
 
