@@ -21,6 +21,8 @@ style: style.css
 
 ![how](container.jpg)
 
+-- 
+
 --
 
 ### IoC Containers
@@ -28,6 +30,14 @@ style: style.css
 
 - BeanFactory
 - ApplicationContext
+
+--
+
+### BeanFactory
+
+--
+
+### ApplicationContext
 
 --
 
