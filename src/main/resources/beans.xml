@@ -2,19 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="constructor">
 
     <bean id="httpClient" class="com.github.kevinjom.http.MyHttpClient"/>
-    <bean id="weiboService" class="com.github.kevinjom.service.WeiboService">
-        <constructor-arg name="httpClient" ref="httpClient"/>
-    </bean>
-    <bean id="twitterService" class="com.github.kevinjom.service.TwitterService">
-        <property name="httpClient" ref="httpClient"/>
-    </bean>
+    <bean id="weiboService" class="com.github.kevinjom.service.WeiboService"/>
+    <bean id="twitterService" class="com.github.kevinjom.service.TwitterService" autowire="byType"></bean>
 
-    <bean class="com.github.kevinjom.service.MessagePoster">
-        <constructor-arg name="twitterService" ref="twitterService"/>
-        <constructor-arg name="weiboService" ref="weiboService"/>
-    </bean>
+    <bean class="com.github.kevinjom.service.MessagePoster"/>
 
 </beans>

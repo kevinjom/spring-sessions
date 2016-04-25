@@ -107,7 +107,13 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 --
 
 ### Autowire
+>The Spring container can autowire relationships between collaborating beans
 
+#### Autowiring modes
+- no 
+- byType
+- byName
+- constructor
 
 --
 
