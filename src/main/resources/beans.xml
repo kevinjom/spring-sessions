@@ -9,7 +9,7 @@
         <constructor-arg name="httpClient" ref="httpClient"/>
     </bean>
     <bean id="twitterService" class="com.github.kevinjom.service.TwitterService">
-        <constructor-arg name="httpClient" ref="httpClient"/>
+        <property name="httpClient" ref="httpClient"/>
     </bean>
 
     <bean class="com.github.kevinjom.service.MessagePoster">

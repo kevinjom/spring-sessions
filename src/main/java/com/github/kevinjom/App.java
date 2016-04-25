@@ -24,7 +24,9 @@ public class App {
     public static void postWithoutContainers() {
         HttpClient client = new MyHttpClient();
 
-        TwitterService twitterService = new TwitterService(client);
+        TwitterService twitterService = new TwitterService();
+        twitterService.setHttpClient(client);
+
         WeiboService weiboService = new WeiboService(client);
 
         MessagePoster poster = new MessagePoster(twitterService, weiboService);
