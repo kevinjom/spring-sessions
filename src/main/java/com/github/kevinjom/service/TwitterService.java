@@ -2,6 +2,7 @@ package com.github.kevinjom.service;
 
 import com.github.kevinjom.http.HttpClient;
 import com.github.kevinjom.model.Tweet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 
 public class TwitterService {
@@ -11,7 +12,7 @@ public class TwitterService {
         return httpClient.post("twitter.com/me", tweet).equals("ok");
     }
 
-    @Required
+    @Autowired
     public void setHttpClient(HttpClient httpClient) {
         this.httpClient = httpClient;
     }

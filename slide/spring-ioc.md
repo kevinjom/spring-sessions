@@ -117,6 +117,17 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 
 --
 
+@Autowired
+
+- autowiring by type
+- indicate this dependent bean is required
+- BeanFactory supports? maybe *NOT*
+
+
+@Resource - by name
+
+--
+
 ### Lifecycle
 
 ![lc](lc.jpg)

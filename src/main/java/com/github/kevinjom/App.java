@@ -16,7 +16,7 @@ public class App {
 
         //postWithoutContainers();
 
-//        postWithBeanFactory();
+        postWithBeanFactory();
         postWithApplicationContext();
 
     }

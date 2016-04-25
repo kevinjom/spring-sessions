@@ -2,10 +2,12 @@ package com.github.kevinjom.service;
 
 import com.github.kevinjom.http.HttpClient;
 import com.github.kevinjom.model.Weibo;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class WeiboService {
     private final HttpClient httpClient;
 
+    @Autowired
     public WeiboService(HttpClient httpClient) {
         this.httpClient = httpClient;
     }
