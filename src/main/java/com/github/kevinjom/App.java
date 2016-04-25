@@ -35,6 +35,7 @@ public class App {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         MessagePoster messagePoster = applicationContext.getBean(MessagePoster.class);
         messagePoster.post("hello app ctxt");
+        applicationContext.getBean(MessagePoster.class).post("test scope");
     }
 
     public static void postWithBeanFactory() {

@@ -7,6 +7,7 @@ public class WeiboService {
     private final HttpClient httpClient;
 
     public WeiboService(HttpClient httpClient) {
+        System.out.println("creating ws...");
         this.httpClient = httpClient;
     }
 

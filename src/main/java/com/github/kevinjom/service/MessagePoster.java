@@ -8,6 +8,7 @@ public class MessagePoster {
     private final WeiboService weiboService;
 
     public MessagePoster(TwitterService twitterService, WeiboService weiboService) {
+        System.out.println("creating mp");
         this.twitterService = twitterService;
         this.weiboService = weiboService;
     }

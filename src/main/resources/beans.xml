@@ -12,7 +12,7 @@
         <constructor-arg name="httpClient" ref="httpClient"/>
     </bean>
 
-    <bean class="com.github.kevinjom.service.MessagePoster">
+    <bean class="com.github.kevinjom.service.MessagePoster" scope="prototype">
         <constructor-arg name="twitterService" ref="twitterService"/>
         <constructor-arg name="weiboService" ref="weiboService"/>
     </bean>
