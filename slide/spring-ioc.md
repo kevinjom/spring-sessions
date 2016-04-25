@@ -52,6 +52,12 @@ Spring supports
 
 --
 
+### Use beans
+
+(demo code)
+
+--
+
 ### BeanFactory or ApplicationContext
 #### ApplicationContext *please* 
 **ApplicationContext** can do all the things **BeanFactory** does, and also:
@@ -68,6 +74,12 @@ Spring supports
 Currently,all the internal **ApplicationContext** use **DefaultListableBeanFactory** to as the bean container
 
 --
+
+###  Instantiating a bean
+- constructor
+- static fm
+- instance fm
+- FactoryBean
 
 
 ### Lifecycle
