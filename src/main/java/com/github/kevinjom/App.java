@@ -3,22 +3,43 @@ package com.github.kevinjom;
 import com.github.kevinjom.http.HttpClient;
 import com.github.kevinjom.http.MyHttpClient;
 import com.github.kevinjom.service.MessagePoster;
-import com.github.kevinjom.service.TweetService;
+import com.github.kevinjom.service.TwitterService;
 import com.github.kevinjom.service.WeiboService;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.ClassPathResource;
 
 public class App {
     public static void main(String[] args) {
 
-        postWithoutContainers();
+        //postWithoutContainers();
+
+//        postWithBeanFactory();
+        postWithApplicationContext();
+
     }
 
-    public static  void postWithoutContainers() {
+    public static void postWithoutContainers() {
         HttpClient client = new MyHttpClient();
 
-        TweetService tweetService = new TweetService(client);
+        TwitterService twitterService = new TwitterService(client);
         WeiboService weiboService = new WeiboService(client);
 
-        MessagePoster poster = new MessagePoster(tweetService, weiboService);
-        poster.post("hello spring ioc");
+        MessagePoster poster = new MessagePoster(twitterService, weiboService);
+        poster.post("hello old java");
+    }
+
+    public static void postWithApplicationContext() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        MessagePoster messagePoster = applicationContext.getBean(MessagePoster.class);
+        messagePoster.post("hello app ctxt");
+    }
+
+    public static void postWithBeanFactory() {
+        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
+        MessagePoster messagePoster = beanFactory.getBean(MessagePoster.class);
+        messagePoster.post("hello bean facotry");
     }
 }

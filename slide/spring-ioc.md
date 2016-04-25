@@ -21,25 +21,46 @@ style: style.css
 
 ![how](container.jpg)
 
--- 
-
 --
 
 ### IoC Containers
-#### A colleciton of beans
+#### A colleciton of dependencies
+- register dependencies
+- dependency injection
+- get dependencies
+
+Spring provides
 
 - BeanFactory
 - ApplicationContext
 
+### Congiuration metadata
+#### configuration metadata represents how you as an application developer tell the Spring container to instantiate, configure, and assemble the objects in your application
+
+Spring supports 
+
+- xml
+- java configuration
+
 --
 
-### BeanFactory
+### BeanFactory or ApplicationContext
+#### ApplicationContext *please* 
+**ApplicationContext** can do all the things **BeanFactory** does, and also:
+
+- Automatic BeanPostProcessor registration
+- Automatic BeanFactoryPostProcessor registration
+- Convenient MessageSource access (for i18n)
+- ApplicationEvent publication
 
 --
 
-### ApplicationContext
+
+### DefaultListableBeanFactory
+Currently,all the internal **ApplicationContext** use **DefaultListableBeanFactory** to as the bean container
 
 --
+
 
 ### Lifecycle
 

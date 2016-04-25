@@ -4,16 +4,16 @@ import com.github.kevinjom.model.Tweet;
 import com.github.kevinjom.model.Weibo;
 
 public class MessagePoster {
-    private final TweetService tweetService;
+    private final TwitterService twitterService;
     private final WeiboService weiboService;
 
-    public MessagePoster(TweetService tweetService, WeiboService weiboService) {
-        this.tweetService = tweetService;
+    public MessagePoster(TwitterService twitterService, WeiboService weiboService) {
+        this.twitterService = twitterService;
         this.weiboService = weiboService;
     }
 
     public boolean post(String content) {
-        return tweetService.post(new Tweet(content)) && weiboService.post(new Weibo(content));
+        return twitterService.post(new Tweet(content)) && weiboService.post(new Weibo(content));
     }
 
 }

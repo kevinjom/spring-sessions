@@ -3,10 +3,10 @@ package com.github.kevinjom.service;
 import com.github.kevinjom.model.Tweet;
 import com.github.kevinjom.http.HttpClient;
 
-public class TweetService {
+public class TwitterService {
     private final HttpClient httpClient;
 
-    public TweetService(HttpClient httpClient) {
+    public TwitterService(HttpClient httpClient) {
         this.httpClient = httpClient;
     }
 
