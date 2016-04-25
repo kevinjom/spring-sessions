@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="httpClient" class="com.github.kevinjom.http.MyHttpClient"/>
+    <bean id="httpClient" class="com.github.kevinjom.factory.HttpClientFactoryBean"/>
     <bean id="weiboService" class="com.github.kevinjom.service.WeiboService">
         <constructor-arg name="httpClient" ref="httpClient"/>
     </bean>
