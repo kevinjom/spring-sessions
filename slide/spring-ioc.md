@@ -9,6 +9,26 @@ style: style.css
 
 --
 
+### Case
+
+> We want to build an application which acts like a social media facade, when you want to post a message to your social media account, you just post to this app, it will post the message to your social accounts. 
+
+--
+
+### Case
+#### Components
+![case](ioc_case.jpg)
+
+--
+
+### Case
+#### Plain Old Java way
+
+(demo)
+
+
+--
+
 ### What is IoC
 
 #### DI vs IoC

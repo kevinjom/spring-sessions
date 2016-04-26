@@ -448,12 +448,31 @@ em {
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
+    <section class="slide-content"><h3 id="case">Case</h3>
+<blockquote>
+<p>We want to build an application which acts like a social media facade, when you want to post a message to your social media account, you just post to this app, it will post the message to your social accounts.</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-3">
+    <section class="slide-content"><h3 id="case">Case</h3>
+<h4 id="components">Components</h4>
+<p><img src="ioc_case.jpg" alt="case"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-4">
+    <section class="slide-content"><h3 id="case">Case</h3>
+<h4 id="plain-old-java-way">Plain Old Java way</h4>
+<p>(demo)</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-5">
     <section class="slide-content"><h3 id="what-is-ioc">What is IoC</h3>
 <h4 id="di-vs-ioc">DI vs IoC</h4>
 <p>DI is a concret form of IoC</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-3">
+  <div class="slide hidden" id="slide-6">
     <section class="slide-content"><h3 id="why-is-it">Why is it</h3>
 <ul>
 <li>flexibility<ul>
@@ -471,12 +490,12 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-4">
+  <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h3 id="how-in-spring-">How (in Spring)</h3>
 <p><img src="container.jpg" alt="how"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-5">
+  <div class="slide hidden" id="slide-8">
     <section class="slide-content"><h3 id="ioc-containers">IoC Containers</h3>
 <h4 id="a-colleciton-of-dependencies">A colleciton of dependencies</h4>
 <ul>
@@ -491,7 +510,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-6">
+  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h3 id="congiuration-metadata">Congiuration metadata</h3>
 <h4 id="configuration-metadata-represents-how-you-as-an-application-developer-tell-the-spring-container-to-instantiate-configure-and-assemble-the-objects-in-your-application">configuration metadata represents how you as an application developer tell the Spring container to instantiate, configure, and assemble the objects in your application</h4>
 <p>Spring supports </p>
@@ -501,17 +520,17 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-7">
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h3 id="instantiating-a-container">Instantiating a container</h3>
 <p>(demo code)</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h3 id="use-beans">Use beans</h3>
 <p>(demo code)</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><h3 id="beanfactory-or-applicationcontext">BeanFactory or ApplicationContext</h3>
 <h4 id="applicationcontext-please-">ApplicationContext <em>please</em></h4>
 <p><strong>ApplicationContext</strong> can do all the things <strong>BeanFactory</strong> does, and also:</p>
@@ -523,12 +542,12 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-13">
     <section class="slide-content"><h3 id="defaultlistablebeanfactory">DefaultListableBeanFactory</h3>
 <p>Currently,all the internal <strong>ApplicationContext</strong> use <strong>DefaultListableBeanFactory</strong> to as the bean container</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-14">
     <section class="slide-content"><h3 id="instantiating-a-bean">Instantiating a bean</h3>
 <ul>
 <li>constructor</li>
@@ -538,13 +557,13 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="constructor-injection-vs-setter-inection">Constructor Injection vs Setter Inection</h3>
 <h4 id="follow-mr-jay-constructor-injection-please-">follow Mr Jay, Constructor Injection <em>please</em></h4>
 <p>(demo code)</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="bean-scope">Bean Scope</h3>
 <ul>
 <li>singleton(default)</li>
@@ -555,7 +574,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="bean-scope">Bean Scope</h3>
 <blockquote>
 <p>You cannot dependency-inject a prototype-scoped bean into your singleton bean, because that injection occurs only once</p>
@@ -563,7 +582,7 @@ em {
 <h4 id="method-injection-">method injection?</h4>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="autowire">Autowire</h3>
 <blockquote>
 <p>The Spring container can autowire relationships between collaborating beans</p>
@@ -577,7 +596,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="-autowired">@Autowired</h3>
 <ul>
 <li>autowiring by type</li>
@@ -587,7 +606,7 @@ em {
 <p>@Resource - by name</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="component-scan">Component Scan</h3>
 <pre><code>    &lt;context:component-scan base-package=&quot;com.github.kevinjom&quot;/&gt;</code></pre>
 <ul>
@@ -599,7 +618,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="java-configuration">Java Configuration</h3>
 <ul>
 <li>@Configuration</li>
@@ -608,12 +627,12 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="lifecycle">Lifecycle</h3>
 <p><img src="lc.jpg" alt="lc"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h3 id="lifecycle">Lifecycle</h3>
 <ul>
 <li>Bean lifecycle callbacks</li>
@@ -622,7 +641,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="bean-lifecycle-callbacks">Bean lifecycle callbacks</h3>
 <ul>
 <li>Init callbacks</li>
@@ -630,7 +649,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="init-callbacks">Init callbacks</h3>
 <ul>
 <li>PostConstruct </li>
@@ -639,7 +658,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="desctruction-callbacks">Desctruction callbacks</h3>
 <ul>
 <li>PreDestory </li>
@@ -648,7 +667,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="aware-interfaces">Aware interfaces</h3>
 <ul>
 <li>ApplicationContextAware</li>
@@ -656,7 +675,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="container-extension-points">Container extension points</h3>
 <ul>
 <li>BeanPostProcessor</li>
@@ -664,7 +683,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h3 id="beanpostprocessor">BeanPostProcessor</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">BeanPostProcessor</span> </span>{
 <span class="hljs-function">Object <span class="hljs-title">postProcessBeforeInitialization</span><span class="hljs-params">(Object bean, 
@@ -675,7 +694,7 @@ em {
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h3 id="applicationcontextawareprocessor">ApplicationContextAwareProcessor</h3>
 <pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationContextAwareProcessor</span> 
   <span class="hljs-keyword">implements</span> <span class="hljs-title">BeanPostProcessor</span> </span>{
@@ -697,7 +716,7 @@ em {
     }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h3 id="beanfactorypostprocessor">BeanFactoryPostProcessor</h3>
 <pre><code>public interface BeanFactoryPostProcessor {
 void postProcessBeanFactory(ConfigurableListableBeanFactory 
