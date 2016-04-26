@@ -11,10 +11,20 @@ style: style.css
 
 ### What is IoC
 
+#### DI vs IoC
+DI is a concret form of IoC
+
 --
 
 ### Why is it
 
+* flexibility
+   - easy to change the implementation 
+* readability
+   - simpler code
+* testability
+   - easy to test, because the dependencies are injected (created outside), so its easy to use stub or mocks.
+   
 --
 
 ### How (in Spring)
@@ -129,6 +139,15 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 --
 
 ### Component Scan
+```
+    <context:component-scan base-package="com.github.kevinjom"/>
+```
+
+- @Component
+- @Service
+- @Repositry
+- @Controller
+- @RestController
 
 --
 
@@ -136,6 +155,8 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 - @Configuration
 - @Bean
 - @Scope
+
+--
 
 ### Lifecycle
 

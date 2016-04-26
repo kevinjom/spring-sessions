@@ -449,10 +449,26 @@ em {
   </div>
   <div class="slide hidden" id="slide-2">
     <section class="slide-content"><h3 id="what-is-ioc">What is IoC</h3>
+<h4 id="di-vs-ioc">DI vs IoC</h4>
+<p>DI is a concret form of IoC</p>
 </section>
   </div>
   <div class="slide hidden" id="slide-3">
     <section class="slide-content"><h3 id="why-is-it">Why is it</h3>
+<ul>
+<li>flexibility<ul>
+<li>easy to change the implementation </li>
+</ul>
+</li>
+<li>readability<ul>
+<li>simpler code</li>
+</ul>
+</li>
+<li>testability<ul>
+<li>easy to test, because the dependencies are injected (created outside), so its easy to use stub or mocks.</li>
+</ul>
+</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-4">
@@ -573,6 +589,14 @@ em {
   </div>
   <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="component-scan">Component Scan</h3>
+<pre><code>    &lt;context:component-scan base-package=&quot;com.github.kevinjom&quot;/&gt;</code></pre>
+<ul>
+<li>@Component</li>
+<li>@Service</li>
+<li>@Repositry</li>
+<li>@Controller</li>
+<li>@RestController</li>
+</ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-18">
@@ -582,11 +606,14 @@ em {
 <li>@Bean</li>
 <li>@Scope</li>
 </ul>
-<h3 id="lifecycle">Lifecycle</h3>
-<p><img src="lc.jpg" alt="lc"></p>
 </section>
   </div>
   <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h3 id="lifecycle">Lifecycle</h3>
+<p><img src="lc.jpg" alt="lc"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="lifecycle">Lifecycle</h3>
 <ul>
 <li>Bean lifecycle callbacks</li>
@@ -595,7 +622,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="bean-lifecycle-callbacks">Bean lifecycle callbacks</h3>
 <ul>
 <li>Init callbacks</li>
@@ -603,7 +630,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="init-callbacks">Init callbacks</h3>
 <ul>
 <li>PostConstruct </li>
@@ -612,7 +639,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-23">
     <section class="slide-content"><h3 id="desctruction-callbacks">Desctruction callbacks</h3>
 <ul>
 <li>PreDestory </li>
@@ -621,7 +648,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="aware-interfaces">Aware interfaces</h3>
 <ul>
 <li>ApplicationContextAware</li>
@@ -629,7 +656,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="container-extension-points">Container extension points</h3>
 <ul>
 <li>BeanPostProcessor</li>
@@ -637,7 +664,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="beanpostprocessor">BeanPostProcessor</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">BeanPostProcessor</span> </span>{
 <span class="hljs-function">Object <span class="hljs-title">postProcessBeforeInitialization</span><span class="hljs-params">(Object bean, 
@@ -648,7 +675,7 @@ em {
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="applicationcontextawareprocessor">ApplicationContextAwareProcessor</h3>
 <pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationContextAwareProcessor</span> 
   <span class="hljs-keyword">implements</span> <span class="hljs-title">BeanPostProcessor</span> </span>{
@@ -670,7 +697,7 @@ em {
     }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="beanfactorypostprocessor">BeanFactoryPostProcessor</h3>
 <pre><code>public interface BeanFactoryPostProcessor {
 void postProcessBeanFactory(ConfigurableListableBeanFactory 
