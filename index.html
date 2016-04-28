@@ -371,6 +371,43 @@ pre code {
   font-size: 140%;
 }
 
+.slide {
+  background-color: inherit;
+}
+
+.keyword {
+  color: #0086b3 !important;
+  font-weight: inherit !important;
+}
+
+.tag {
+  color: #900 !important;
+}
+
+code {
+  background-color: inherit;
+}
+
+em {
+  border-bottom: 1px solid #666;
+}
+
+body {
+  background-color: #222;
+  color: #eee;
+}
+
+h1, h3 {
+  font-family: Impact;
+  font-weight: bold;
+  font-style: italic;
+}
+
+pre code {
+  color: #ccc;
+  font-size: 140%;
+}
+
 .keyword {
   color: #0086b3 !important;
   font-weight: inherit !important;
@@ -692,13 +729,36 @@ em {
   </div>
   <div class="slide hidden" id="slide-33">
     <section class="slide-content"><h3 id="beanfactorypostprocessor">BeanFactoryPostProcessor</h3>
-<pre><code>public interface BeanFactoryPostProcessor {
-void postProcessBeanFactory(ConfigurableListableBeanFactory 
-        beanFactory);
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">BeanFactoryPostProcessor</span> </span>{
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">postProcessBeanFactory</span><span class="hljs-params">(ConfigurableListableBeanFactory 
+        beanFactory)</span></span>;
 }</code></pre>
 </section>
   </div>
-  <div class="slide hidden author-slide" id="slide-34">
+  <div class="slide hidden" id="slide-34">
+    <section class="slide-content"><h3 id="webapplicationcontext">WebApplicationContext</h3>
+<h4 id="we-are-doing-web-things-yes-">We are doing WEB things. YES!!!!</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">WebApplicationContext</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ApplicationContext</span> </span>{
+<span class="hljs-function">ServletContext <span class="hljs-title">getServletContext</span><span class="hljs-params">()</span></span>;
+}</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-35">
+    <section class="slide-content"><h3 id="spring-mvc">Spring MVC</h3>
+<p><img src="mvc.png" alt="mvc"></p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-36">
+    <section class="slide-content"><h3 id="spring-boot">Spring boot</h3>
+<h4 id="powered-by-spring-mvc">Powered by Spring MVC</h4>
+<blockquote>
+<p>you may have known <code>WebApplicationContext</code> and spring mvc, <strong>NOW</strong> lets </p>
+<h4 id="diy-a-spring-boot-app">DIY a spring-boot app</h4>
+<p>(demo)</p>
+</blockquote>
+</section>
+  </div>
+  <div class="slide hidden author-slide" id="slide-37">
     <section class="slide-content"><div class="author">
   <h1 class="name">kevinjom</h1>
     <h3 class="twitter">

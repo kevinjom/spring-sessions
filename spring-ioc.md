@@ -283,12 +283,37 @@ public Object postProcessBeforeInitialization(final Object bean, String beanName
 --
 
 ### BeanFactoryPostProcessor
-```
+```java
 public interface BeanFactoryPostProcessor {
 void postProcessBeanFactory(ConfigurableListableBeanFactory 
 		beanFactory);
 }
 ```
+
+--
+
+### WebApplicationContext
+#### We are doing WEB things. YES!!!!
+
+```java
+public interface WebApplicationContext extends ApplicationContext {
+ServletContext getServletContext();
+}
+```
+
+--
+
+### Spring MVC
+![mvc](mvc.png)
+
+--
+
+### Spring boot
+#### Powered by Spring MVC
+
+>you may have known `WebApplicationContext` and spring mvc, **NOW** lets 
+#### DIY a spring-boot app
+(demo)
 
 
 
