@@ -304,8 +304,14 @@ ServletContext getServletContext();
 --
 
 ### Spring MVC
+#### offical 
 ![mvc](mvc.png)
 
+--
+
+### Spring MVC
+#### from someone I dont know but I like it
+![mvc](mvc2.jpg)
 --
 
 ### Spring boot
@@ -314,6 +320,26 @@ ServletContext getServletContext();
 >you may have known `WebApplicationContext` and spring mvc, **NOW** lets 
 #### DIY a spring-boot app
 (demo)
+
+--
+
+### Summary
+- Spring has two types of IoC Containers 
+- We can config spring through XML and Java Config
+- Use FactoryBean to instantiate a bean unless you cannot use constructor
+- Constructor injection please
+
+--
+
+### Summary
+- Don't dependency-inject a prototype-scoped bean into your singleton bean
+- Use java config if you can, but don't hate XML
+- Use lifecycle callbacks unless you cannot do it easily through other solution
+- Spring mvc is the woman behind spring-boot, love it and understand it
+
+--
+# Thank you
+
 
 
 
