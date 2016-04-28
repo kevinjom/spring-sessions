@@ -1,4 +1,8 @@
 title: Spring IoC Containe
+author:
+  name: kevinjom
+  twitter: kevinjom
+  url: http://kevinjom.github.io
 theme: jdan/cleaver-retro
 controls: false
 style: style.css
@@ -160,9 +164,17 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 --
 
 ### Component Scan
-```
+#### Instaed of configure beans by yourself, let spring find them and configure them for you
+
+enable it by 
+
+```xml
     <context:component-scan base-package="com.github.kevinjom"/>
 ```
+
+--
+
+### What are they scanning?
 
 - @Component
 - @Service
@@ -176,6 +188,13 @@ Currently,all the internal **ApplicationContext** use **DefaultListableBeanFacto
 - @Configuration
 - @Bean
 - @Scope
+- @ComponentScan
+
+--
+
+### Java Configuration
+
+(demo)
 
 --
 
@@ -270,5 +289,6 @@ void postProcessBeanFactory(ConfigurableListableBeanFactory
 		beanFactory);
 }
 ```
+
 
 

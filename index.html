@@ -371,43 +371,6 @@ pre code {
   font-size: 140%;
 }
 
-.slide {
-  background-color: inherit;
-}
-
-.keyword {
-  color: #0086b3 !important;
-  font-weight: inherit !important;
-}
-
-.tag {
-  color: #900 !important;
-}
-
-code {
-  background-color: inherit;
-}
-
-em {
-  border-bottom: 1px solid #666;
-}
-
-body {
-  background-color: #222;
-  color: #eee;
-}
-
-h1, h3 {
-  font-family: Impact;
-  font-weight: bold;
-  font-style: italic;
-}
-
-pre code {
-  color: #ccc;
-  font-size: 140%;
-}
-
 .keyword {
   color: #0086b3 !important;
   font-weight: inherit !important;
@@ -607,7 +570,13 @@ em {
   </div>
   <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="component-scan">Component Scan</h3>
-<pre><code>    &lt;context:component-scan base-package=&quot;com.github.kevinjom&quot;/&gt;</code></pre>
+<h4 id="instaed-of-configure-beans-by-yourself-let-spring-find-them-and-configure-them-for-you">Instaed of configure beans by yourself, let spring find them and configure them for you</h4>
+<p>enable it by </p>
+<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">context:component-scan</span> <span class="hljs-attr">base-package</span>=<span class="hljs-string">"com.github.kevinjom"</span>/&gt;</span></code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-21">
+    <section class="slide-content"><h3 id="what-are-they-scanning-">What are they scanning?</h3>
 <ul>
 <li>@Component</li>
 <li>@Service</li>
@@ -617,21 +586,27 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><h3 id="java-configuration">Java Configuration</h3>
 <ul>
 <li>@Configuration</li>
 <li>@Bean</li>
 <li>@Scope</li>
+<li>@ComponentScan</li>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-22">
+  <div class="slide hidden" id="slide-23">
+    <section class="slide-content"><h3 id="java-configuration">Java Configuration</h3>
+<p>(demo)</p>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-24">
     <section class="slide-content"><h3 id="lifecycle">Lifecycle</h3>
 <p><img src="lc.jpg" alt="lc"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-23">
+  <div class="slide hidden" id="slide-25">
     <section class="slide-content"><h3 id="lifecycle">Lifecycle</h3>
 <ul>
 <li>Bean lifecycle callbacks</li>
@@ -640,7 +615,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-24">
+  <div class="slide hidden" id="slide-26">
     <section class="slide-content"><h3 id="bean-lifecycle-callbacks">Bean lifecycle callbacks</h3>
 <ul>
 <li>Init callbacks</li>
@@ -648,7 +623,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-25">
+  <div class="slide hidden" id="slide-27">
     <section class="slide-content"><h3 id="init-callbacks">Init callbacks</h3>
 <ul>
 <li>PostConstruct </li>
@@ -657,7 +632,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-26">
+  <div class="slide hidden" id="slide-28">
     <section class="slide-content"><h3 id="desctruction-callbacks">Desctruction callbacks</h3>
 <ul>
 <li>PreDestory </li>
@@ -666,7 +641,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-27">
+  <div class="slide hidden" id="slide-29">
     <section class="slide-content"><h3 id="aware-interfaces">Aware interfaces</h3>
 <ul>
 <li>ApplicationContextAware</li>
@@ -674,7 +649,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-28">
+  <div class="slide hidden" id="slide-30">
     <section class="slide-content"><h3 id="container-extension-points">Container extension points</h3>
 <ul>
 <li>BeanPostProcessor</li>
@@ -682,7 +657,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-29">
+  <div class="slide hidden" id="slide-31">
     <section class="slide-content"><h3 id="beanpostprocessor">BeanPostProcessor</h3>
 <pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">BeanPostProcessor</span> </span>{
 <span class="hljs-function">Object <span class="hljs-title">postProcessBeforeInitialization</span><span class="hljs-params">(Object bean, 
@@ -693,7 +668,7 @@ em {
 }</span></code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-30">
+  <div class="slide hidden" id="slide-32">
     <section class="slide-content"><h3 id="applicationcontextawareprocessor">ApplicationContextAwareProcessor</h3>
 <pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApplicationContextAwareProcessor</span> 
   <span class="hljs-keyword">implements</span> <span class="hljs-title">BeanPostProcessor</span> </span>{
@@ -715,12 +690,24 @@ em {
     }</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-31">
+  <div class="slide hidden" id="slide-33">
     <section class="slide-content"><h3 id="beanfactorypostprocessor">BeanFactoryPostProcessor</h3>
 <pre><code>public interface BeanFactoryPostProcessor {
 void postProcessBeanFactory(ConfigurableListableBeanFactory 
         beanFactory);
 }</code></pre>
+</section>
+  </div>
+  <div class="slide hidden author-slide" id="slide-34">
+    <section class="slide-content"><div class="author">
+  <h1 class="name">kevinjom</h1>
+    <h3 class="twitter">
+      <a href="http://twitter.com/@kevinjom">@kevinjom</a>
+    </h3>
+    <h3 class="url">
+      <a href="http://kevinjom.github.io">http://kevinjom.github.io</a>
+    </h3>
+</div>
 </section>
   </div>
 
