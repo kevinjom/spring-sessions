@@ -8,6 +8,7 @@ import com.github.kevinjom.service.TwitterService;
 import com.github.kevinjom.service.WeiboService;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -21,7 +22,8 @@ public class App {
 //        postWithBeanFactory();
 //        postWithApplicationContext();
 
-        postWithJavaConfigContext();
+//postWithJavaConfigContext();
+        myWebApplicationContext();
     }
 
     public static void postWithoutContainers() {
@@ -52,5 +54,10 @@ public class App {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfigruation.class);
         MessagePoster messagePoster = applicationContext.getBean(MessagePoster.class);
         messagePoster.post("hello java config app ctxt");
+    }
+
+
+    public static void myWebApplicationContext() {
+        new AnnotationConfigEmbeddedWebApplicationContext(AppConfigruation.class);
     }
 }
